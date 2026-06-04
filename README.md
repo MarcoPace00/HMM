@@ -5,10 +5,6 @@ tradeable market regimes (bull / bear / flat) in liquid ETFs and turn them into 
 long/flat timing strategy. The repo is an iteration log: each `HMM_*.py` script is
 a successive attempt to fix the weaknesses of the previous one.
 
-> ⚠️ **Research only — not investment advice.** Backtests use free `yfinance`
-> data, model **no transaction costs or slippage**, and are single-path. Treat
-> every number as illustrative.
-
 ---
 
 ## TL;DR — what we learned

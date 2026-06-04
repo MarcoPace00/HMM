@@ -5,6 +5,10 @@ tradeable market regimes (bull / bear / flat) in liquid ETFs and turn them into 
 long/flat timing strategy. The repo is an iteration log: each `HMM_*.py` script is
 a successive attempt to fix the weaknesses of the previous one.
 
+> ⚠️ **Research only — not investment advice.** Backtests use free `yfinance`
+> data, model **no transaction costs or slippage**, and are single-path. Treat
+> every number as illustrative.
+
 ---
 
 ## TL;DR — what we learned
@@ -192,16 +196,16 @@ The `.html` reports are self-contained interactive Plotly charts. GitHub shows
 their source rather than rendering them, so open them one of these ways:
 
 - **Download** the file and open it in a browser, or
-- **htmlpreview** (no setup — just replace `USER` / `REPO` below; branch is `main`):
-  - [HMM_1 — equity & drawdown](https://htmlpreview.github.io/?https://github.com/USER/REPO/blob/main/hmm_equity.html)
-  - [HMM_2 — vol-targeted](https://htmlpreview.github.io/?https://github.com/USER/REPO/blob/main/hmm_equity_voltarget.html)
-  - [HMM_3 — equity & drawdown](https://htmlpreview.github.io/?https://github.com/USER/REPO/blob/main/hmm3_equity.html)
-  - [HMM_3 — regime map](https://htmlpreview.github.io/?https://github.com/USER/REPO/blob/main/hmm3_regimes.html)
+- **htmlpreview** (no setup needed):
+  - [HMM_1 — equity & drawdown](https://htmlpreview.github.io/?https://github.com/MarcoPace00/HMM/blob/main/hmm_equity.html)
+  - [HMM_2 — vol-targeted](https://htmlpreview.github.io/?https://github.com/MarcoPace00/HMM/blob/main/hmm_equity_voltarget.html)
+  - [HMM_3 — equity & drawdown](https://htmlpreview.github.io/?https://github.com/MarcoPace00/HMM/blob/main/hmm3_equity.html)
+  - [HMM_3 — regime map](https://htmlpreview.github.io/?https://github.com/MarcoPace00/HMM/blob/main/hmm3_regimes.html)
 
 > htmlpreview requires the repo to be **public** and pulls the whole ~5–6 MB
 > file through a proxy, so it can be slow. For snappier viewing, enable **GitHub
 > Pages** and the files serve directly at
-> `https://USER.github.io/REPO/hmm3_equity.html`.
+> `https://marcopace00.github.io/HMM/hmm3_equity.html`.
 
 ## Design notes (shared across scripts)
 

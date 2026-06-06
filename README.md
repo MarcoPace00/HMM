@@ -10,7 +10,7 @@ a successive attempt to fix the weaknesses of the previous one.
 - **Volatility targeting is the only robust win.** Scaling position size so
   trailing realized vol tracks a target cut max drawdowns **3–5×** on the
   volatile/leveraged names (TQQQ, UPRO, BTC) and improved Sharpe almost
-  everywhere. This is _risk control_, and it works.
+  everywhere.
 - **The directional signal is weak.** Predicting next-day ETF direction from an
   HMM is close to a coin flip. Every variant confirmed this.
 - **Discrete models beat the GMM** at the selection game — `CategoricalHMM`
@@ -19,9 +19,6 @@ a successive attempt to fix the weaknesses of the previous one.
   **how you size risk matters far more than which model you pick.**
 - **Nothing beat SPY buy-&-hold on raw return** — but the vol-targeted variants
   matched its risk-adjusted return with a fraction of the drawdown.
-
-Bottom line: as a _market-timing alpha_ engine this doesn't work; as a
-_risk-control overlay_ it does.
 
 ---
 
@@ -178,11 +175,6 @@ but the risk-adjusted profile is far better.
 
 ### Other experiments
 
-- **Calmar-based model selection** (an intermediate `HMM_3` variant): scoring the
-  per-step model choice by Calmar (return/MaxDD) instead of Sharpe **did not
-  reliably reduce drawdowns** — it even made some worse (BTC went to a negative
-  Sharpe). Lesson: drawdowns come from _position sizing_, not _model selection_.
-  This variant was retired.
 - **Model-selection tally:** `CategoricalHMM` states were chosen ~2× more often
   than the `GMMHMM` — discrete observations suited this directional task better,
   which is partly why `HMM_3` moved away from raw-return GMMs toward engineered
